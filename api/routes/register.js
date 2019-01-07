@@ -10,8 +10,7 @@ router.post("/", (request, response, next) => {
   User.find({ email: request.body.email })
     .exec()
     .then(isUser => {
-      console.log(isUser);
-      if (isUser) {
+      if (isUser.length >= 1) {
         return response.status(409).json({
           message: "This User allready exists"
         });
@@ -42,8 +41,7 @@ router.post("/", (request, response, next) => {
           }
         });
       }
-    })
-    .catch();
+    });
 });
 
 module.exports = router;

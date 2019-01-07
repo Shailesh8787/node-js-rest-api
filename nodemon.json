@@ -1,5 +1,6 @@
 {
   "env": {
-    "MONGO_ATLAS_PASSWORD": "devOPS"
+    "MONGO_ATLAS_PASSWORD": "devOPS",
+    "JWT_KEY": "secret"
   }
 }
