@@ -9,7 +9,7 @@ const loginRouter = require("./api/routes/login");
 const app = express();
 
 mongoose.connect(
-  "mongodb+srv://shaileshy731:devOPS!@#123@cluster0.j4fzb4o.mongodb.net/?retryWrites=true&w=majority",
+  "mongodb+srv://shaileshy731:test123@cluster0.j4fzb4o.mongodb.net/?retryWrites=true&w=majority",
   {
     useNewUrlParser: true
   }
