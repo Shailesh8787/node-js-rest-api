@@ -6,6 +6,8 @@ const mongoose = require("mongoose");
 const usersRouter = require("./api/routes/users");
 const registerRouter = require("./api/routes/register");
 const loginRouter = require("./api/routes/login");
+const Movies = require('./api/routes/movies');
+
 const app = express();
 
 mongoose.connect(
@@ -39,6 +41,7 @@ app.use((request, response, next) => {
 app.use("/users", usersRouter);
 app.use("/register", registerRouter);
 app.use("/login", loginRouter);
+app.use("/movies", Movies);
 
 app.use((request, response, next) => {
   const error = new Error("Not Found");

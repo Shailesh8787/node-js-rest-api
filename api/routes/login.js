@@ -12,16 +12,18 @@ router.post("/", (request, response, next) => {
     .then(user => {
       if (user.length < 1) {
         return response.status(401).json({
-          message: "Auth failed"
+          message: "User Not exits"
         });
       }
+      console.log(request.body.password)
+      console.log(user)
       bcrypt.compare(
         request.body.password,
         user[0].password,
         (error, result) => {
           if (error) {
             return response.status(401).json({
-              message: "Auth failed"
+              message: "Password not matched"
             });
           }
 
@@ -46,7 +48,7 @@ router.post("/", (request, response, next) => {
           }
 
           return response.status(401).json({
-            message: "Auth failed"
+            message: "Username and password does not exists"
           });
         }
       );
