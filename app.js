@@ -9,9 +9,7 @@ const loginRouter = require("./api/routes/login");
 const app = express();
 
 mongoose.connect(
-  "mongodb://devops:" +
-    process.env.MONGO_ATLAS_PASSWORD +
-    "@cluster0-shard-00-00-lfyxo.mongodb.net:27017,cluster0-shard-00-01-lfyxo.mongodb.net:27017,cluster0-shard-00-02-lfyxo.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true",
+  "mongodb+srv://shaileshy731:devOPS!@#123@cluster0.j4fzb4o.mongodb.net/?retryWrites=true&w=majority",
   {
     useNewUrlParser: true
   }
