@@ -15,8 +15,7 @@ router.post("/", (request, response, next) => {
           message: "User Not exits"
         });
       }
-      console.log(request.body.password)
-      console.log(user)
+      console.log(user[0])
       bcrypt.compare(
         request.body.password,
         user[0].password,
