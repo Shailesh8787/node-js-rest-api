@@ -28,6 +28,7 @@ router.post("/", checkAuth, (request, response, next) => {
         _id: new mongoose.Types.ObjectId(),
         name: request.body.name,
         email: request.body.email,
+        role_id: 1,
         phone: request.body.phone,
         password: hash
       });

@@ -41,6 +41,7 @@ router.post("/", (request, response, next) => {
               message: "Auth successful",
               data: {
                 id: user[0]._id,
+                role_id: user[0].role_id,
                 token: token
               }
             });

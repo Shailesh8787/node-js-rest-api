@@ -9,6 +9,7 @@ const movieSchema = mongoose.Schema({
   },
   genre: {type: String},
   rating: { type: Number },
+  movieGenre: {type: String},
   description: { type: String }
 });
 

@@ -23,6 +23,7 @@ router.post("/", (request, response, next) => {
               _id: new mongoose.Types.ObjectId(),
               name: request.body.name,
               email: request.body.email,
+              role_id: request.body.role_id,
               phone: request.body.phone,
               password: hash
             });
